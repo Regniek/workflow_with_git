@@ -1,0 +1,142 @@
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git init
+Initialized empty Git repository in /home/regniek/development/personalProjects/bancobogota/gitflow/.git/
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git add .
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git commit "this verison 1.0.0"
+error: pathspec 'this verison 1.0.0' did not match any file(s) known to git
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git commit -m"this verison 1.0.0"
+[master (root-commit) 8fc30cd] this verison 1.0.0
+ 1 file changed, 3 insertions(+)
+ create mode 100644 README.md
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git branch feature1
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git checkout feature1
+Switched to branch 'feature1'
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git status
+On branch feature1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git add .
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git commit -m"add feature1 with a little change"
+[feature1 a4a0b78] add feature1 with a little change
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git checkout master
+Switched to branch 'master'
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git merge feature1
+Updating 8fc30cd..a4a0b78
+Fast-forward
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git status
+On branch master
+nothing to commit, working tree clean
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git branch hotfix
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git checkout hotfix
+Switched to branch 'hotfix'
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git status
+On branch hotfix
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git add .
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git commit -m"hotfix in a readme for showing the workflow"
+[hotfix a82f9cc] hotfix in a readme for showing the workflow
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git checkout master
+Switched to branch 'master'
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git merge hotfix
+Updating a4a0b78..a82f9cc
+Fast-forward
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git checkout -- .
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git branch feature 2
+fatal: Not a valid object name: '2'.
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git branch feature2
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git status
+On branch master
+nothing to commit, working tree clean
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git add .
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git commit -m"create action in version 1.1.0 in master"
+[master 2a02f87] create action in version 1.1.0 in master
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git checkout feature2
+Switched to branch 'feature2'
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git status
+On branch feature2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git add .
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git commit -m"create action in version 1.1.0 in feature2"
+[feature2 4750a40] create action in version 1.1.0 in feature2
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git checkout master
+Switched to branch 'master'
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git merge feature2
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git add .
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git commit -m"finish version v1.2.0"
+[master 7a22778] finish version v1.2.0
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git remote add origin https://github.com/Regniek/workflow_with_git.git
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git branch -M master
+regniek@LAPTOP-T56BRUJL:~/development/personalProjects/bancobogota/gitflow$ git push -u origin master
+Username for 'https://github.com': regniek
+Password for 'https://regniek@github.com':
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (18/18), 1.48 KiB | 1.48 MiB/s, done.
+Total 18 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), done.
+To https://github.com/Regniek/workflow_with_git.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
