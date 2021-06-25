@@ -7,3 +7,6 @@ this is a simple code repository for following workflow
 3.add a fix in a hotfix branch
 
 4.create a workflow in parallel
+4.add action en feature2 in parrale with master
+
+5.solve merge conflicts and I continue work.
